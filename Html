@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroFix Academy - Learn Electronic Repairs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>ElectroFix Academy</h1>
+        <nav>
+            <ul>
+                <li><a href="#categories">Device Categories</a></li>
+                <li><a href="#videos">Video Library</a></li>
+                <li><a href="#reports">Reports & Guides</a></li>
+                <li><a href="#tools">Tools & Resources</a></li>
+                <li><a href="#forum">Community Forum</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h2>Master Electronic Repairs with Videos and Guides</h2>
+        <input type="text" id="search" placeholder="Search for a device or repair (e.g., 'Fix iPhone screen')">
+        <button onclick="searchRepair()">Search</button>
+        <p>Free basic content. Premium for advanced tutorials.</p>
+    </section>
+
+    <section id="categories">
+        <h2>Device Categories</h2>
+        <div class="grid">
+            <div class="card" onclick="loadCategory('phones')">Phones & Tablets</div>
+            <div class="card" onclick="loadCategory('computers')">Computers & Laptops</div>
+            <div class="card" onclick="loadCategory('appliances')">Appliances</div>
+            <div class="card" onclick="loadCategory('audio')">Audio/Video</div>
+            <div class="card" onclick="loadCategory('wearables')">Wearables</div>
+            <div class="card" onclick="loadCategory('advanced')">Advanced Electronics</div>
+        </div>
+    </section>
+
+    <section id="videos">
+        <h2>Featured Videos</h2>
+        <div id="video-list">
+            <div class="video-item">
+                <h3>How to Open and Clean a Smartphone</h3>
+                <p>Beginner tutorial (5-10 min). <a href="#">Watch Now</a></p>
+            </div>
+            <div class="video-item">
+                <h3>Replacing a Laptop Hard Drive</h3>
+                <p>Intermediate guide (15-20 min). <a href="#">Watch Now</a></p>
+            </div>
+            <!-- Add more as needed -->
+        </div>
+    </section>
+
+    <section id="reports">
+        <h2>Reports & Guides</h2>
+        <div id="report-list">
+            <div class="report-item">
+                <h3>Common Smartphone Battery Issues</h3>
+                <p>Detailed report with diagrams. <a href="#" download>Download PDF</a></p>
+            </div>
+            <div class="report-item">
+                <h3>Troubleshooting Home Appliance Motors</h3>
+                <p>Comprehensive guide. <a href="#" download>Download PDF</a></p>
+            </div>
+            <!-- Add more as needed -->
+        </div>
+    </section>
+
+    <section id="tools">
+        <h2>Tools & Resources</h2>
+        <p>Glossary, tool recommendations, and safety tips.</p>
+        <ul>
+            <li>Multimeter: Essential for testing circuits.</li>
+            <li>Soldering Iron: For component repairs.</li>
+            <li>ESD Protection: Always use to avoid static damage.</li>
+        </ul>
+    </section>
+
+    <section id="forum">
+        <h2>Community Forum</h2>
+        <p>Join discussions and ask questions. (Placeholder – integrate with a real forum like Discourse.)</p>
+        <textarea placeholder="Post a question..."></textarea>
+        <button>Submit</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 ElectroFix Academy. <a href="#">About Us</a> | <a href="#">Contact</a> | <a href="#">Privacy</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+#hero {
+    text-align: center;
+    padding: 2rem;
+    background-color: #e9ecef;
+}
+
+#hero input {
+    padding: 0.5rem;
+    width: 300px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.card {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    text-align: center;
+}
+
+.video-item, .report-item {
+    background-color: white;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #007bff;
+    color: white;
+}function searchRepair() {
+    const query = document.getElementById('search').value;
+    alert(`Searching for: ${query}. (Placeholder – integrate with real search API.)`);
+}
+
+function loadCategory(category) {
+    alert(`Loading ${category} category. (Placeholder – redirect to category page.)`);
+}
